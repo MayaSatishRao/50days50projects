@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    background-color: #f0f0f0;
+   
+}
+
+h1{
+    text-align: center;
+    margin:50px 0 30px;
+}
+.faq-container{
+    max-width:600px;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.faq{
+    position:relative;
+    background: transparent;
+    border:1px solid #9fa4a8;
+    border-radius:10px;
+    transition:0.4s ease-in;
+    margin: 20px 0;
+    padding:30px;
+    overflow: hidden;
+}
+
+.faq.active{
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3),0 3px 6px rgba(0,0,0,0.3);
+}
+
+.faq.active::before , .faq.active::after{
+   content:"\f075";
+   font-family:"Font Awesome 5 Free";
+   font-size:7rem;
+   color:#2ecc71;
+   opacity:0.2;
+   position:absolute;
+   top:20px;
+   left:20px;
+   z-index: 0;
+}
+
+.faq.active::before{
+    color:#3498db;
+    transform:rotateY(180deg);
+    top:-10px;
+    left:-30px;
+}
+
+.faq-title{
+    margin:0 35px 0 0 ;
+}
+
+.faq-text{
+    margin:30px 0 0;
+    display: none;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+.faq-toggle{
+    position:absolute;
+    top:30px;
+    right:30px;
+    height:30px;
+    width: 30px;
+    border-radius:50%;
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:0;
+    font-size:16px;
+    cursor: pointer;
+}
+
+.faq-toggle:focus{
+    outline:0;
+}
+
+.faq-toggle .fa-times{
+    display:none;
+}
+
+.faq.active .fa-times{
+    display:block;
+    color:#fff;
+}
+
+.faq.active .fa-chevron-down{
+    display:none;
+}
+
+.faq.active .faq-toggle{
+    background-color: #9fa4a8;
+}
