@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:white;
+    --secondary-color:black;
+}
+
+html.dark{
+    --primary-color:#333;
+    --secondary-color:#fff;
+}
+
+html.dark{
+    background-color:#111;
+    color:#fff;
+}
+html{
+    transition: all 0.4s ease-in;
+}
+body {
+    font-family: 'Heebo', sans-serif;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.toggleButton{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    position: absolute;
+    top:60px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    border:0;
+    cursor:pointer;
+}
+
+.clock-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.clock{
+    width:400px;
+    height:400px;
+    position: relative;
+}
+
+.clock-hand{
+    height:130px;
+    width:6px;
+    background-color: var(--secondary-color);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform-origin:bottom;
+    transition: all 0.4s ease;
+}
+
+.clock-hand.hour{
+    transform:translate(-50%,-100%) rotate(0deg);
+}
+
+.clock-hand.minute{
+    transform:translate(-50%,-100%) rotate(30deg);
+    height: 160px;
+}
+
+.clock-hand.second{
+    transform:translate(-50%,-100%) rotate(210deg);
+    height: 160px;
+    background-color:#e74c3c;
+}
+
+.center-point{
+    background-color: #e74c3c;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.center-point::after{
+    content: "";
+    background-color: var(--secondary-color);
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.time{
+    font-size:60px;
+}
+
+.day{
+    font-size:14px;
+    color:#aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.day .circle{
+    background-color: var(--secondary-color);
+    height:18px;
+    width:18px;
+    border-radius: 50%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.4s ease-in;
+    font-size: 12px;
+}
