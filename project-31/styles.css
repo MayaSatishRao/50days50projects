@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #3b3b98;
+    color:white;
+    padding: 10px;
+}
+
+h2{
+    margin:10px 0 20px;
+    text-align: center;
+}
+
+.container{
+    background-color: #23235b;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.2);
+    padding:20px;
+    width:400px;
+    max-width: 100%;
+}
+
+.result-container{
+    background-color: rgba(0,0,0,0.3);
+    display:flex;
+    justify-content: flex-start;
+    position:relative;
+    letter-spacing: 1px;
+    font-size:18px;
+    align-items:center;
+    padding: 12px 10px;
+    height: 50px;
+    width:100%;
+}
+
+#result{
+    word-wrap:break-word;
+    max-width: calc(100%-40px);
+}
+
+.btn{
+    background-color: #3b3b98;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    font-size: 16px;
+}
+
+.btn-large{
+    width:100%;
+    display: block;
+}
+
+.result-container button{
+    position: absolute;
+    right:5px;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.setting{
+    display: flex;
+    justify-content: space-between;
+    margin:15px ;
+    align-items: center;
+}
