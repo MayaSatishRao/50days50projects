@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo{
+    width:250px;
+}
+
+p{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.btn{
+    border:none;
+    font-size:30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.hamburger-menu{
+    position:fixed;
+    top:10px;
+    left:10px;
+}
+
+.nav{
+    position: fixed;
+    top:0;
+    left:0;
+    transform:translateX(-100%);
+    transition:transform 0.4s ease-in-out;
+    height:100vh;
+}
+
+.nav.visible{
+    transform: translateX(0);
+}
+
+.nav-black{
+    background-color: #000;
+    width:70%;
+    max-width:480px;
+    min-width:320px;
+    transition-delay: 0.4s;
+}
+
+.nav-black.visible{
+    transition-delay: 0;
+}
+
+.nav-red{
+    background-color: rgb(229,9,29);
+    width:95%;
+    transition-delay: 0.2s;
+}
+
+.nav-red.visible{
+    transition-delay: 0.2s;
+}
+
+.nav-white{
+    background-color: #fff;
+    padding:40px;
+    position: relative;
+    width:95%;
+    transition-delay: 0s;
+}
+
+.nav-white.visible{
+    transition-delay: 0.4s;
+}
+
+.close{
+    opacity:0.4;
+    position:absolute;
+    top:40px;
+    right: 30px;
+}
+
+li{
+    list-style-type: none;
+    margin:20px 0;
+    padding: 0;
+}
+
+li a{
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+}
